@@ -15,6 +15,8 @@ public class Car
     
     Garage theGarage=null;
 
+	private static Car car;
+
     
     /**
      * Constructor of a car specifying the garage object
@@ -28,12 +30,12 @@ public class Car
      */
     public static void main(String[] args) throws InterruptedException{
     	Garage g = new Garage();
-    	Car car = new Car(g);
-        car.accelerate();
+    	car = new Car(g);
+        Car.accelerate();
         slowDown();
         moveDown();
         accelerate();
-        car.printGarage();
+        g.printGarage();
 //        turnRight();
 //        turnHeadlightsOn();
 //        turnHeadlightsOff();
@@ -43,7 +45,7 @@ public class Car
      * Accelerate the car
      * @throws InterruptedException 
      */
-    public void accelerate() throws InterruptedException{
+    public static void accelerate() throws InterruptedException{
         String c = new String("*");
         String space = new String(" ");
     	for(int i=0; i<5; i++)
@@ -58,8 +60,8 @@ public class Car
      * Slow down the car
      * @throws InterruptedException 
      */
-    public void slowDown() throws InterruptedException{
-    	string c = new string("     *");
+    public static void slowDown() throws InterruptedException{
+    	String c = new String("     *");
     	for(int i=0; i<5; i++)
         {
         	System.out.print(c);
@@ -73,9 +75,9 @@ public class Car
      * Move the car downwards
      * @throws InterruptedException 
      */    
-    public void moveDown() throws InterruptedException{
-    	string c = new string("\t\t\t\t  *"));
-    	for(int i=0, i<5, i++)
+    public static void moveDown() throws InterruptedException{
+    	String c = new String("\t\t\t\t  *");
+    	for(int i=0; i<5; i++)
         {
     		if(i!=4)
     			System.out.println(c);
