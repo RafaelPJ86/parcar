@@ -15,10 +15,7 @@ public class Car
     
     Garage theGarage=null;
 
-	private static Car car;
-
-    
-    /**
+	/**
      * Constructor of a car specifying the garage object
      */
     public Car (Garage g){
@@ -30,7 +27,7 @@ public class Car
      */
     public static void main(String[] args) throws InterruptedException{
     	Garage g = new Garage();
-    	car = new Car(g);
+    	new Car(g);
         Car.accelerate();
         slowDown();
         moveDown();
